@@ -36,6 +36,7 @@ import { MemberEditResolver } from './_resolves/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { JwtModule } from '@auth0/angular-jwt';
+import { ListsResolver } from './_resolves/lists.resolver';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -86,7 +87,8 @@ export function tokenGetter() {
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
-    PreventUnsavedChanges
+    PreventUnsavedChanges,
+    ListsResolver
   ],
   bootstrap: [AppComponent]
 })
